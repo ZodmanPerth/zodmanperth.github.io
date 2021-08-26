@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta google-site-verification="WyLBDFVmaejbUqIefBev5CcMRFKKh9doT7LQhgWkBgM"><meta rating="safe for kids"><title>Building a Pause Menu - Part 4 - Red Peregrine</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Red Peregrine"><meta name="msapplication-TileImage" content="/img/personal-blog/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Red Peregrine"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="The new design is a lock.  Time to prototype."><meta property="og:type" content="article"><meta property="og:title" content="Building a Pause Menu - Part 4"><meta property="og:url" content="https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/"><meta property="og:site_name" content="Red Peregrine"><meta property="og:description" content="The new design is a lock.  Time to prototype."><meta property="og:locale" content="en_US"><meta property="og:image" content="https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/palacio-840x485.jpg"><meta property="article:published_time" content="2020-03-25T00:56:12.000Z"><meta property="article:modified_time" content="2021-08-24T22:29:09.163Z"><meta property="article:author" content="Carl Scarlett"><meta property="article:tag" content="Godot"><meta property="article:tag" content="GUI"><meta property="article:tag" content="Menu"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/2020/04/25/building-a-pause-menu-part-4/palacio-840x485.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/"},"headline":"Building a Pause Menu - Part 4","image":["https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/palacio-840x485.jpg"],"datePublished":"2020-03-25T00:56:12.000Z","dateModified":"2021-08-24T22:29:09.163Z","author":{"@type":"Person","name":"Carl Scarlett"},"publisher":{"@type":"Organization","name":"Red Peregrine","logo":{"@type":"ImageObject","url":"https://www.redperegrine.net/img/personal-blog/logo.svg"}},"description":"The new design is a lock.  Time to prototype."}</script><link rel="canonical" href="https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/"><link rel="icon" href="/img/personal-blog/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.0.1/styles/base16/oceanicnext.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red%20Hat%20Display:wght@400;700&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/personal-blog/logo.svg" alt="Red Peregrine" height="56"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="Index" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image"><img class="fill" src="/2020/04/25/building-a-pause-menu-part-4/palacio-840x485.jpg" alt="Building a Pause Menu - Part 4"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-03-25T00:56:12.000Z" title="3/25/2020, 8:56:12 AM">2020-03-25</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-08-24T22:29:09.163Z" title="8/25/2021, 6:29:09 AM">2021-08-25</time></span><span class="level-item">16 minutes read (About 2442 words)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>&nbsp;visits</span></div></div><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><a class="link-muted" href="/categories/gamedev/">gamedev</a><span> / </span><a class="link-muted" href="/categories/gamedev/indiedev/">indiedev</a><span> / </span><a class="link-muted" href="/categories/godot/">godot</a><span> / </span><a class="link-muted" href="/categories/zodproj/">zodproj</a><span> / </span><a class="link-muted" href="/categories/series/">series</a><span> / </span><a class="link-muted" href="/categories/series/pausemenu/">PauseMenu</a></span></div></div><h1 class="title is-3 is-size-4-mobile">Building a Pause Menu - Part 4</h1><div class="content"><p>The new design is a lock.  Time to prototype.</p>
+<span id="more"></span>
+
+
+      <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-size:12px;line-height:1.2;display:inline-block;border-radius:3px" class="mt-3 mb-2" target="_blank" rel="noopener" href="https://unsplash.com/photos/ImcUkZ72oUs">
+        <i class="fas fa-camera mr-2"></i><em>Wonderspaces</em> by Israel Palacio
+      </a>
+    
+
+
+
+<br>
+
+
+<!-- Top link section -->
+<article class="message is-link" style="margin-top: 1.3em"><div class="message-body" style="color:#3273dc">		<p style="font-size: 0.8em;margin-bottom: 0.5em;">PREVIOUS POSTS IN THIS SERIES</p>
+<div class="columns" style="overflow:auto">
+	<div class="column is-narrow">
+		<a href="/2018/12/30/building-a-pause-menu-part-1/">Building a Pause Menu - Part 1</a><br>
+		<a href="/2019/12/27/building-a-pause-menu-part-2/">Building a Pause Menu - Part 2</a><br>
+		<a href="/2020/03/15/building-a-pause-menu-part-3/">Building a Pause Menu - Part 3</a><br>
+	</div>
+	<div class="column is-narrow">
+		-<br>
+		-<br>
+		-<br>
+	</div>
+	<div class="column is-narrow">
+		The first version<br>
+		The rewrite showcase<br>
+		Designing the new version<br>
+	</div>
+</div>
+</div>
+</article>
+
+
+
+      <a style="background-color:#28a028;color:white;text-decoration:none;padding:4px 6px;font-size:12px;line-height:1.2;display:inline-block;border-radius:3px;margin-top:0px;margin-bottom:0.7em" class="" href="#Background">
+        <i class="fas fa-share fa-rotate-180 mr-2"></i>Skip Preface and Jump to the Post
+      </a>
+    
+
+
+<div class="mb-3"></div> 
+
+
+<article class="message message-immersive is-success zodnote">
+      <div class="message-body">
+        <span class="tag is-success mr-2">PREFACE</span>
+        <br><br><p></p>
+<p><em>The bulk of this article was written during the height of the first wave of the COVID-19 pandemic in Australia (where I live).  Australia chose the lockdown method as our response to dealing with the virus.  You would think that would mean I had more time to devote to my blog, but the contrary is true.  With the added chaos of having a partner also working from home, two daughters being schooled from home, restrictions on supermarket purchases</em> and <em>shopping for my elderly mother resulting in almost daily trips to the shop, I actually had</em> less <em>time to work on this post than I usually do.</em> </p>
+<br>
+
+<p><em>Further, as I prepared the video accompanying this post, I discovered the free software I normally use had started begun driving people to purchase the product by putting watermarks on the video exports.  As a software developer myself I understand and don’t object to this practice, however I felt their pricing didn’t reflect the quality of the tool and couldn’t justify spending so much on something I use so little.</em></p>
+<br>
+
+<p><em>Seeking both paid</em> and <em>free alternatives, I now use <a target="_blank" rel="noopener" href="https://www.blender.org/">Blender</a> for video editing software.  While I haven’t made anything large or complicated yet, I feel I work quicker with it than with  my previous software.  It’s more difficult to use and doesn’t have all the features I currently need though, so time will tell.  At least there’s a</em> lot <em>of online content demonstrating how to use and configure it.  I’m happy with the results so far.  Hopefully it improves my throughput in the long run.</em></p>
+<br>
+
+<p><em>As I write this COVID-19 continues to devastate many corners of the world.  Hundreds of thousands of people have died as a result of this virus.  Wherever you are in the world, I hope you, your family, and your friends are doing everything to stay safe at this difficult time.</em>
+      </p></div>
+    </article>
+    
+
+
+
+
+<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>In <a href="/2020/03/15/building-a-pause-menu-part-3/">my last post</a> I went into detail about why I redesigned the Pause Menu for my Capability Test app, the design process, and what the final design was.  The Capability Test app is a project where I experiment with code to test and create the building blocks for a game I’ve designed and will be building with the <a target="_blank" rel="noopener" href="https://godotengine.org/">Godot engine</a>.</p>
+<p>I mentioned how important it is for the Pause Menu to <a href="/2020/03/15/building-a-pause-menu-part-3/#Succumbing-to-Design-Impulses">reflect the feel of my game</a>, as I wanted to lift the code and place it into my game once I begin building it.  I also stated that designing was only the first step, and I would need to <a href="/2020/03/15/building-a-pause-menu-part-3/#Final-Tweaks-to-the-Design">prototype</a> the design to ensure it actually works before moving onto play-testing with other people.</p>
+<p>In this post I talk about building that prototype.</p>
+<article class="message message-immersive is-primary zodnote">
+      <div class="message-body">
+        <span class="tag is-primary mr-2">NOTE</span>
+        If you have seen my previous post you’ll have seen a <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=6uZF5jY8a5g">video</a> of the completed product.  For the purpose of this post, you’ll need to imagine that all I had at this point was the completed new design, the understanding that Godot has built-in support for <a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/3.2/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide">move-and-slide</a>, and that I was expecting this to be a relatively simple coding exercise to complete.
+      </div>
+    </article>
+    
+
+
+
+
+
+
+<h1 id="First-steps"><a href="#First-steps" class="headerlink" title="First steps"></a>First steps</h1><p>As a reminder, here is the sketch of the design I was going to prototype:</p>
+<p><img src="/2020/03/15/building-a-pause-menu-part-3/new-menu.png" alt="A sketch of the new design"></p>
+<br>
+
+<p>Prototyping this would be relatively simple given the majority of the touch interface code had been built in a previous capability test.  All I needed to do was to create a few walls, a Thumbnail utilising Godot’s collision system, hook up input gestures to move the Thumbnail, and apply Godot’s <a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/3.2/classes/class_kinematicbody.html#class-kinematicbody-method-move-and-slide">move-and-slide</a> functionality to the Thumbnail.</p>
+<p>I created a new scene for the new Pause Menu because I didn’t want to modify the code in the existing Pause Menu until I had confirmed the new design worked.  I typically use this development approach because it ensures I focus purely on the code I’m developing; iterating fast, testing and tweaking until things are working to my satisfaction.</p>
+<p>Looking at the <a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/3.2/classes/class_kinematicbody.html">Godot documentation</a> I found in order to utilise move-and-slide the Thumbnail needed to be a <code>KinematicBody2D</code> and the walls should be <code>StaticBody2D</code>.  My scene’s root node was of type <code>Node</code> and I added the Thumbnail node and two Wall nodes.</p>
+<p>I used a <code>CollisionShape2D</code>as the collision shape on the Thumbnail, and a <code>Polygon2D</code> to create visual of the Thumb using a <code>PoolVector2Array</code>.  Both were defined using the properties panel.  I made the visual a solid white colour for now.  I added a script to the Thumbnail node and pulled in my movement management code.  At this stage I included both touch and mouse input because I wanted to explore how accurate Godot’s collision system was by providing precise input, as well as getting a feel for manipulating the Thumbnail with touch.</p>
+<p>Similar to the Thumbnail node, I added <code>CollisionShape2D</code> and <code>Polygon2D</code> properties to define the collision and visual of the walls (again in white). I set the walls up carefully so the data defining them formed a perfectly angled corner into which the Thumbnail would fit.  At this stage I was calculating coordinates and and inputting the data by hand just to get started.</p>
+<p>Finally I added a node to draw debug visualisations.  I wanted to visualise the drag vector as an arrow so I could see the origination point, size, and direction in which the Thumbnail was being dragged.  For this I just made a <code>Node2D</code> with a script that exposed an array property called <code>vectors</code> expecting dictionary elements <code>{ vector, position }</code>.  I then implemented the <code>_draw()</code> method such that, on every frame, each element in <code>vectors</code> would be drawn as an arrow with a filled circle at its <code>position</code> and a length and direction defined by its <code>vector</code>.  I updated the Thumbnail script to capture a reference to this <code>debugVisualiser</code> node using <code>onready</code>, then cleared and add the gesture vector while the gesture interaction was occurring.</p>
+<p>It took a bit of <a target="_blank" rel="noopener" href="https://www.dictionary.com/browse/jiggery-pokery">jiggery-pokery</a> to get the code working like I wanted (I’m no GDScript professional quite yet!), but before long I had the prototype up and running.  I had to pinch myself to believe it, but the move and slide behaviour worked exactly as described right out of the box!</p>
+<p>Here’s a video showing the prototype of the scene at this point.  I’m moving the Thumbnail around with the mouse and have ensured the pointer is visible in the video for reference.  You can observe when I’m click-and-dragging by the visualisation of the gesture vector as a purple arrow, and see how the Thumbnail slides along the walls right into the corner and stops.</p>
+
+    <div class="video-container" style="padding-top:0.49em">
+      
+    <div class="video-container" style="padding-top:0">
+      <iframe src="https://www.youtube.com/embed/lG4io3b6qyg" frameborder="0" loading="lazy" allowfullscreen=""></iframe>
+    </div>
+  
+    </div>
+  <p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 6px">Prototyping with Godot’s move-and-slide</p>
+
+
+
+
+<h1 id="It-Works-Or-Does-it"><a href="#It-Works-Or-Does-it" class="headerlink" title="It Works! Or Does it?"></a>It Works! Or Does it?</h1><p>On the surface things appeared to be working perfectly.  But as all good engineers know, you have to put your model under stress to ensure there aren’t any edge cases skulking about.  Unfortunately for me, when I pushing my prototype to the limit I noticed a couple of such issues.</p>
+<p>First, I discovered that when the gesture vector became sufficiently large, the Thumbnail would push right through the wall and appear on the other side.  This isn’t normally an issue for Godot as the move-and-slide feature is typically used in platformer games where the velocity of objects is small enough and the problem never arises.  However in my case I’m targeting a variety of devices with different form factors, so the gesture vector very easily reaches these large amounts.</p>
+<p>I experimented with different wall sizes to see if I could prevent the issue.  This is when I noticed the second issue; when the gesture vector was sufficiently large and the wall was sufficiently thick, the Thumbnail would slowly intrude <em>into</em> the wall.</p>
+
+    <div class="video-container" style="padding-top:0.49em">
+      
+    <div class="video-container" style="padding-top:0">
+      <iframe src="https://www.youtube.com/embed/5bxTFS4dav0" frameborder="0" loading="lazy" allowfullscreen=""></iframe>
+    </div>
+  
+    </div>
+  <p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 6px">Issue showcase. I moved the wall visual back from the <code>CollisionShape2D</code> to highlight the intrusion effect.</p>
+
+
+<p>For my design I want the walls to form an impervious boundary for the Thumbnail, not be soft and squishy like memory foam.</p>
+<h1 id="Building-a-Bespoke-Move-and-Slide"><a href="#Building-a-Bespoke-Move-and-Slide" class="headerlink" title="Building a Bespoke Move and Slide"></a>Building a Bespoke Move and Slide</h1><p>Move and Slide isn’t a particularly difficult problem to solve, it’s just a bit of vector geometry.  There’s plenty of documented examples of how it works on the web.  Personally I think this <a target="_blank" rel="noopener" href="https://kidscancode.org/blog/2017/06/godot_101_13/">KinematicBody2D Collisions Done Right</a> page from <a target="_blank" rel="noopener" href="https://kidscancode.org/blog/">Kids Can Code</a> explains it best.  Here’s a reference diagram from that post:</p>
+<p><img src="kids-can-code-move-and-slide.jpg" alt="Fundamentals of move-and-slide (credit to <a href=&quot;https://kidscancode.org/godot_recipes/physics/kinematic_to_rigidbody/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;>Kids Can Code</a>)"></p>
+<p>Because I couldn’t get Godot’s implementation working for me with my own use case, my only way forward would be to build my own implementation.  Vector geometry isn’t difficult to codify, so why not?  Because I was restricting my walls to be <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Convex_polygon">convex shapes</a> by design, there would be a maximum of 2 collisions to detect.  This didn’t seem like too much work for GDScript so it should be performant enough.</p>
+<p>I simplified my model so that I could focus on the math, starting by determining when a gesture vector positioned at the centre of the wall geometry would collide with a wall edge.  After several failed attempts at trying to work this out in my head, I decided I needed to visualise what was going on.  I extended my <code>debugVisualiser</code> node to draw lines (with circle terminators), points, and text.</p>
+<p>It took a while to get the <code>debugVisualiser</code> working just right, but it was worth the effort.  With interactions now visible it wasn’t long before I has successfully coded the math to detect when the gesture vector collided with one of the walls.</p>
+
+    <div class="video-container" style="padding-top:0.49em">
+      
+    <div class="video-container" style="padding-top:0">
+      <iframe src="https://www.youtube.com/embed/dBiWpeqlCzA" frameborder="0" loading="lazy" allowfullscreen=""></iframe>
+    </div>
+  
+    </div>
+  <p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 6px">Visualising the point where the gesture crosses a wall boundary</p>
+
+
+<article class="message message-immersive is-success zodnote">
+      <div class="message-body">
+        <span class="tag is-success mr-2">ASIDE</span>
+        I have <em>always</em> wanted to build a mathematical visualisation tool like this, and I was excited to finally have built one.  The solution was so elegant, and having achieved it made me feel <em>like a boss</em>.  I’m so proud of myself, I’m <em>still</em> excited to have such a simple and versatile tool in my kit!
+      </div>
+    </article>
+    
+
+
+
+
+
+<h1 id="On-a-Roll"><a href="#On-a-Roll" class="headerlink" title="On a Roll"></a>On a Roll</h1><p>With the collision point detected, I could now focus on building the <em>slide</em>.  It was a simple matter of vector math to calculate the vector from the collision point to the end of the gesture vector, and then use the normal of the wall to project back onto the wall to calculate the slide vector.</p>
+<p>Here’s a video showing what these vectors in orange (again, utilising my <code>debugVisualiser</code>):</p>
+
+    <div class="video-container" style="padding-top:0.49em">
+      
+    <div class="video-container" style="padding-top:0">
+      <iframe src="https://www.youtube.com/embed/WL2-dUl4Ris" frameborder="0" loading="lazy" allowfullscreen=""></iframe>
+    </div>
+  
+    </div>
+  <p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 6px">Visualising the slide for the first collision</p>
+
+
+<p>The next step was to calculate the extent of the slide; the vector from the collision point on the wall to the end of the wall (line).  In my use case, because I only using convex shapes for the wall/thumbnail, this is the point of the algorithm where I can stop calculating.  The Thumbnail cannot slide any further than this extent as it is in a corner.</p>
+<p>In terms of the Pause Menu interface, a Thumbnail in a corner means it is selecting the option positioned at that corner.  As such, in the following video, I show the word <code>CONNECTED</code> and the slide vector at this point in yellow.</p>
+<p>With all this in place, I can start testing how <em>swiping</em> gestures feel.  Towards the end of the video you’ll see me confirming swipe left moves into the top-left corner and swipe down moves into the bottom corner.</p>
+
+    <div class="video-container" style="padding-top:0.49em">
+      
+    <div class="video-container" style="padding-top:0">
+      <iframe src="https://www.youtube.com/embed/Qwys2NlhA_g" frameborder="0" loading="lazy" allowfullscreen=""></iframe>
+    </div>
+  
+    </div>
+  <p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 6px">Visualising the slide extent and the <code>Connected</code> state</p>
+
+
+
+
+<h1 id="Wrapping-it-all-up"><a href="#Wrapping-it-all-up" class="headerlink" title="Wrapping it all up"></a>Wrapping it all up</h1><p>With the simplest case resolved I set about generalising my algorithm to work for any wall, and cleaning up.  The visualisations came in very handy to confirm when things were working and when they weren’t.</p>
+<p>Here’s a final video showing the algorithm working for all three walls of a triangular boundary.</p>
+
+    <div class="video-container" style="padding-top:0.49em">
+      
+    <div class="video-container" style="padding-top:0">
+      <iframe src="https://www.youtube.com/embed/C2JAJRib-w4" frameborder="0" loading="lazy" allowfullscreen=""></iframe>
+    </div>
+  
+    </div>
+  <p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 6px">Visualising all the walls and connections</p>
+
+
+<p>My bespoke move-and-slide algorithm was almost complete.  All that remained was to account for the width of the Thumbnail so that it didn’t move past the wall.  At first I started trying to figure out the logic on the fly using the distance from the center of the Thumbnail along the gesture vector.  Then I realised I could do an up-front calculation and move the <em>logical</em> boundary of the walls in by a certain amount from the <em>visible</em> boundary get the same effect.  This avoided complicating the already-working algorithm.  </p>
+<p>Calculating the amount to bring the logical boundary in was just a little more vector math and I was done.</p>
+<p>I now had everything I needed to build the new Pause Menu.  I’ll cover that in my next post.</p>
+<!-- Bottom link section -->
+<article class="message is-link" style="margin-top: 1.3em"><div class="message-body" style="color:#3273dc">		<p style="font-size: 0.8em;margin-bottom: 0.5em;">PREVIOUS POSTS IN THIS SERIES</p>
+<div class="columns" style="overflow:auto">
+	<div class="column is-narrow">
+		<a href="/2018/12/30/building-a-pause-menu-part-1/">Building a Pause Menu - Part 1</a><br>
+		<a href="/2019/12/27/building-a-pause-menu-part-2/">Building a Pause Menu - Part 2</a><br>
+		<a href="/2020/03/15/building-a-pause-menu-part-3/">Building a Pause Menu - Part 3</a><br>
+	</div>
+	<div class="column is-narrow">
+		-<br>
+		-<br>
+		-<br>
+	</div>
+	<div class="column is-narrow">
+		The first version<br>
+		The rewrite showcase<br>
+		Designing the new version<br>
+	</div>
+</div>
+</div>
+</article>
+
+
+
+
+
+
+</div><div class="article-licensing box"><div class="licensing-title"><p>Building a Pause Menu - Part 4</p><p><a href="https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/">https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Carl Scarlett</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2020-03-25</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2021-08-25</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/godot/">Godot</a><a class="link-muted mr-2" rel="tag" href="/tags/gui/">GUI</a><a class="link-muted mr-2" rel="tag" href="/tags/menu/">Menu</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/04/10/software-algorithms-for-k-combinations/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Software Algorithms for k-combinations</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/03/15/building-a-pause-menu-part-3/"><span class="level-item">Building a Pause Menu - Part 3</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/';
+            this.page.identifier = '2020/04/25/building-a-pause-menu-part-4/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'http-www-redperegrine-net' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://www.gravatar.com/avatar/78e9bc2dd2c2726ff6cd3891fd9dd4bc?s=128" alt="Carl Scarlett"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Carl Scarlett</p><p class="is-size-6 is-block">Designer, Developer, Dreamer, Doer</p><p class="is-size-6 is-flex justify-content-center is-location"><i class="fas fa-map-marker-alt mr-1"></i><span>Perth, Western Australia</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">21</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">23</p></a></div></div></nav><div class="level"><a class="level-item button follow-button is-primary is-rounded" href="https://twitter.com/ZodmanPerth" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button link-button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ZodmanPerth"><i class="fab fa-github"></i></a><a class="level-item button link-button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/ZodmanPerth"><i class="fab fa-twitter"></i></a><a class="level-item button link-button is-transparent is-marginless" target="_blank" rel="noopener" title="LinkedIn" href="https://www.linkedin.com/in/carlscarlett/"><i class="fab fa-linkedin"></i></a><a class="level-item button link-button is-transparent is-marginless" target="_blank" rel="noopener" title="YouTube" href="https://www.youtube.com/user/ZodmanPerth"><i class="fab fa-youtube"></i></a><a class="level-item button link-button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Index</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Background"><span class="level-left"><span class="level-item">1</span><span class="level-item">Background</span></span></a></li><li><a class="level is-mobile" href="#First-steps"><span class="level-left"><span class="level-item">2</span><span class="level-item">First steps</span></span></a></li><li><a class="level is-mobile" href="#It-Works-Or-Does-it"><span class="level-left"><span class="level-item">3</span><span class="level-item">It Works! Or Does it?</span></span></a></li><li><a class="level is-mobile" href="#Building-a-Bespoke-Move-and-Slide"><span class="level-left"><span class="level-item">4</span><span class="level-item">Building a Bespoke Move and Slide</span></span></a></li><li><a class="level is-mobile" href="#On-a-Roll"><span class="level-left"><span class="level-item">5</span><span class="level-item">On a Roll</span></span></a></li><li><a class="level is-mobile" href="#Wrapping-it-all-up"><span class="level-left"><span class="level-item">6</span><span class="level-item">Wrapping it all up</span></span></a></li></ul></div></div><script src="/js/toc.js" defer></script></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/08/25/red-peregrine-2-0/"><img src="/2021/08/25/red-peregrine-2-0/thumb.jpg" alt="Red Peregrine 2.0"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-24T23:35:28.000Z">2021-08-25</time></p><p class="title"><a href="/2021/08/25/red-peregrine-2-0/">Red Peregrine 2.0</a></p><p class="categories"><a href="/categories/zodproj/">zodproj</a> / <a href="/categories/hexo/">hexo</a> / <a href="/categories/hexo/icarus/">icarus</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/04/10/software-algorithms-for-k-combinations/"><img src="/2021/04/10/software-algorithms-for-k-combinations/thumb.jpg" alt="Software Algorithms for k-combinations"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-04-09T23:42:02.000Z">2021-04-10</time></p><p class="title"><a href="/2021/04/10/software-algorithms-for-k-combinations/">Software Algorithms for k-combinations</a></p><p class="categories"><a href="/categories/zodproj/">zodproj</a> / <a href="/categories/tests/">tests</a> / <a href="/categories/tests/performance/">performance</a> / <a href="/categories/mathematics/">mathematics</a> / <a href="/categories/mathematics/k-combinations/">k-combinations</a> / <a href="/categories/algorithms/">algorithms</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/04/25/building-a-pause-menu-part-4/"><img src="/2020/04/25/building-a-pause-menu-part-4/palacio-80x80.jpg" alt="Building a Pause Menu - Part 4"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-03-25T00:56:12.000Z">2020-03-25</time></p><p class="title"><a href="/2020/04/25/building-a-pause-menu-part-4/">Building a Pause Menu - Part 4</a></p><p class="categories"><a href="/categories/gamedev/">gamedev</a> / <a href="/categories/gamedev/indiedev/">indiedev</a> / <a href="/categories/godot/">godot</a> / <a href="/categories/zodproj/">zodproj</a> / <a href="/categories/series/">series</a> / <a href="/categories/series/pausemenu/">PauseMenu</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/03/15/building-a-pause-menu-part-3/"><img src="/2020/03/15/building-a-pause-menu-part-3/guillaume-840x420.jpg" alt="Building a Pause Menu - Part 3"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-03-15T02:29:49.000Z">2020-03-15</time></p><p class="title"><a href="/2020/03/15/building-a-pause-menu-part-3/">Building a Pause Menu - Part 3</a></p><p class="categories"><a href="/categories/gamedev/">gamedev</a> / <a href="/categories/gamedev/indiedev/">indiedev</a> / <a href="/categories/godot/">godot</a> / <a href="/categories/zodproj/">zodproj</a> / <a href="/categories/series/">series</a> / <a href="/categories/series/pausemenu/">PauseMenu</a> / <a href="/categories/design/">design</a> / <a href="/categories/design/process/">process</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2019/12/27/building-a-pause-menu-part-2/"><img src="/2019/12/27/building-a-pause-menu-part-2/living-with-elephants-foundation-300x300.jpg" alt="Building a Pause Menu - Part 2"></a></figure><div class="media-content"><p class="date"><time dateTime="2019-12-27T08:17:50.000Z">2019-12-27</time></p><p class="title"><a href="/2019/12/27/building-a-pause-menu-part-2/">Building a Pause Menu - Part 2</a></p><p class="categories"><a href="/categories/gamedev/">gamedev</a> / <a href="/categories/gamedev/indiedev/">indiedev</a> / <a href="/categories/godot/">godot</a> / <a href="/categories/zodproj/">zodproj</a> / <a href="/categories/series/">series</a> / <a href="/categories/series/pausemenu/">PauseMenu</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">August 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">April 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">March 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/12/"><span class="level-start"><span class="level-item">December 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/12/"><span class="level-start"><span class="level-item">December 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/11/"><span class="level-start"><span class="level-item">November 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/09/"><span class="level-start"><span class="level-item">September 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/08/"><span class="level-start"><span class="level-item">August 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/05/"><span class="level-start"><span class="level-item">May 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/03/"><span class="level-start"><span class="level-item">March 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/12/"><span class="level-start"><span class="level-item">December 2017</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/algorithms/"><span class="level-start"><span class="level-item">algorithms</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/design/"><span class="level-start"><span class="level-item">design</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/design/process/"><span class="level-start"><span class="level-item">process</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/developer/"><span class="level-start"><span class="level-item">developer</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/developer/flow/"><span class="level-start"><span class="level-item">flow</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/developer/productivity/"><span class="level-start"><span class="level-item">productivity</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/gamedev/"><span class="level-start"><span class="level-item">gamedev</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul><li><a class="level is-mobile" href="/categories/gamedev/gameengine/"><span class="level-start"><span class="level-item">gameengine</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/gamedev/indiedev/"><span class="level-start"><span class="level-item">indiedev</span></span><span class="level-end"><span class="level-item tag">9</span></span></a><ul><li><a class="level is-mobile" href="/categories/gamedev/indiedev/gameengine/"><span class="level-start"><span class="level-item">gameengine</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/godot/"><span class="level-start"><span class="level-item">godot</span></span><span class="level-end"><span class="level-item tag">8</span></span></a><ul><li><a class="level is-mobile" href="/categories/godot/gdscript/"><span class="level-start"><span class="level-item">gdscript</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/hexo/"><span class="level-start"><span class="level-item">hexo</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/hexo/icarus/"><span class="level-start"><span class="level-item">icarus</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/mathematics/"><span class="level-start"><span class="level-item">mathematics</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/mathematics/k-combinations/"><span class="level-start"><span class="level-item">k-combinations</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/series/"><span class="level-start"><span class="level-item">series</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/series/pausemenu/"><span class="level-start"><span class="level-item">PauseMenu</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/tests/"><span class="level-start"><span class="level-item">tests</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/tests/performance/"><span class="level-start"><span class="level-item">performance</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/zodproj/"><span class="level-start"><span class="level-item">zodproj</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/algorithms/"><span class="tag">Algorithms</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/benchmarkdotnet/"><span class="tag">BenchmarkDotNet</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">Blog</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/c/"><span class="tag">C#</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/design/"><span class="tag">Design</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gdscript/"><span class="tag">GDScript</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gui/"><span class="tag">GUI</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/game-maker/"><span class="tag">Game Maker</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gameblog/"><span class="tag">GameBlog</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github-gist/"><span class="tag">GitHub Gist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/godot/"><span class="tag">Godot</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">Hexo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/icarus/"><span class="tag">Icarus</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linqpad/"><span class="tag">LINQPad</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/msbuild/"><span class="tag">MSBuild</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mathematics/"><span class="tag">Mathematics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/menu/"><span class="tag">Menu</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sensor/"><span class="tag">Sensor</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/uwp/"><span class="tag">UWP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/unity/"><span class="tag">Unity</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/unreal/"><span class="tag">Unreal</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/visual-studio/"><span class="tag">Visual Studio</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/win2d/"><span class="tag">Win2d</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://godotengine.org/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Godot</span></span><span class="level-right"><span class="level-item tag">godotengine.org</span></span></a></li><li><a class="level is-mobile" href="https://github.com/Microsoft/Win2D" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Win2D</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li><li><a class="level is-mobile" href="https://github.com/dotnet/BenchmarkDotNet" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">BenchmarkDotNet</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li><li><a class="level is-mobile" href="https://www.linqpad.net/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">LINQPad</span></span><span class="level-right"><span class="level-item tag">www.linqpad.net</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/personal-blog/logo.svg" alt="Red Peregrine" height="28"></a><p class="is-size-7"><span>&copy; 2021 Carl Scarlett</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br>[<a href="https://github.com/ZodmanPerth/hexo-theme-icarus" target="_blank" rel="noopener">Modified</a> by Carl Scarlett]<br><span id="busuanzi_container_site_uv">Visited by <span id="busuanzi_value_site_uv">0</span> users</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="What are you looking for?"></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"What are you looking for?","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
