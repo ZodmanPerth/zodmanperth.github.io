@@ -199,9 +199,9 @@
     
     <category term="godot" scheme="https://www.redperegrine.net/categories/godot/"/>
     
-    <category term="gdscript" scheme="https://www.redperegrine.net/categories/godot/gdscript/"/>
-    
     <category term="zodproj" scheme="https://www.redperegrine.net/categories/zodproj/"/>
+    
+    <category term="gdscript" scheme="https://www.redperegrine.net/categories/godot/gdscript/"/>
     
     <category term="series" scheme="https://www.redperegrine.net/categories/series/"/>
     
@@ -210,11 +210,11 @@
     
     <category term="Godot" scheme="https://www.redperegrine.net/tags/godot/"/>
     
+    <category term="GDScript" scheme="https://www.redperegrine.net/tags/gdscript/"/>
+    
     <category term="GUI" scheme="https://www.redperegrine.net/tags/gui/"/>
     
     <category term="Menu" scheme="https://www.redperegrine.net/tags/menu/"/>
-    
-    <category term="GDScript" scheme="https://www.redperegrine.net/tags/gdscript/"/>
     
   </entry>
   
@@ -263,18 +263,18 @@
     
     <category term="godot" scheme="https://www.redperegrine.net/categories/godot/"/>
     
-    <category term="gdscript" scheme="https://www.redperegrine.net/categories/godot/gdscript/"/>
-    
     <category term="zodproj" scheme="https://www.redperegrine.net/categories/zodproj/"/>
+    
+    <category term="gdscript" scheme="https://www.redperegrine.net/categories/godot/gdscript/"/>
     
     
     <category term="Godot" scheme="https://www.redperegrine.net/tags/godot/"/>
     
+    <category term="GDScript" scheme="https://www.redperegrine.net/tags/gdscript/"/>
+    
     <category term="GUI" scheme="https://www.redperegrine.net/tags/gui/"/>
     
     <category term="Menu" scheme="https://www.redperegrine.net/tags/menu/"/>
-    
-    <category term="GDScript" scheme="https://www.redperegrine.net/tags/gdscript/"/>
     
   </entry>
   
@@ -296,16 +296,16 @@
     
     <category term="godot" scheme="https://www.redperegrine.net/categories/godot/"/>
     
-    <category term="gdscript" scheme="https://www.redperegrine.net/categories/godot/gdscript/"/>
-    
     <category term="zodproj" scheme="https://www.redperegrine.net/categories/zodproj/"/>
+    
+    <category term="gdscript" scheme="https://www.redperegrine.net/categories/godot/gdscript/"/>
     
     
     <category term="Godot" scheme="https://www.redperegrine.net/tags/godot/"/>
     
-    <category term="GDScript" scheme="https://www.redperegrine.net/tags/gdscript/"/>
-    
     <category term="Sensor" scheme="https://www.redperegrine.net/tags/sensor/"/>
+    
+    <category term="GDScript" scheme="https://www.redperegrine.net/tags/gdscript/"/>
     
   </entry>
   
@@ -327,16 +327,16 @@
     
     <category term="godot" scheme="https://www.redperegrine.net/categories/godot/"/>
     
-    <category term="gdscript" scheme="https://www.redperegrine.net/categories/godot/gdscript/"/>
-    
     <category term="zodproj" scheme="https://www.redperegrine.net/categories/zodproj/"/>
+    
+    <category term="gdscript" scheme="https://www.redperegrine.net/categories/godot/gdscript/"/>
     
     
     <category term="Godot" scheme="https://www.redperegrine.net/tags/godot/"/>
     
-    <category term="GDScript" scheme="https://www.redperegrine.net/tags/gdscript/"/>
-    
     <category term="Sensor" scheme="https://www.redperegrine.net/tags/sensor/"/>
+    
+    <category term="GDScript" scheme="https://www.redperegrine.net/tags/gdscript/"/>
     
   </entry>
   
