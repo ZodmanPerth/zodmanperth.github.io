@@ -6,7 +6,7 @@
   <link href="https://www.redperegrine.net/atom.xml" rel="self"/>
   
   <link href="https://www.redperegrine.net/"/>
-  <updated>2021-08-24T22:29:09.177Z</updated>
+  <updated>2021-08-28T02:17:45.142Z</updated>
   <id>https://www.redperegrine.net/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="https://www.redperegrine.net/2021/08/25/red-peregrine-2-0/"/>
     <id>https://www.redperegrine.net/2021/08/25/red-peregrine-2-0/</id>
     <published>2021-08-24T23:35:28.000Z</published>
-    <updated>2021-08-24T22:29:09.177Z</updated>
+    <updated>2021-08-28T02:17:45.142Z</updated>
     
     
-    <summary type="html">&lt;p&gt;A lot more than a facelift.&lt;/p&gt;</summary>
+    <summary type="html">Upgrading the Icarus theme of Hexo.io from version 0.2 to version 4.2 and restyling my Hexo.io blog site.  I share the custom Tag Helpers I created to build various components on my Hexo blog site.</summary>
     
     
     
@@ -48,10 +48,10 @@
     <link href="https://www.redperegrine.net/2021/04/10/software-algorithms-for-k-combinations/"/>
     <id>https://www.redperegrine.net/2021/04/10/software-algorithms-for-k-combinations/</id>
     <published>2021-04-09T23:42:02.000Z</published>
-    <updated>2021-08-24T22:29:09.170Z</updated>
+    <updated>2021-08-28T02:16:24.515Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Interpreting the mathematics of k-combinations for computer programmers.&lt;/p&gt;</summary>
+    <summary type="html">Discovering and explaining the mathematics of k-combinations and how to create k-combination algorithms in any language.  I share my Rank and Unrank algorithms for k-combinations written in C#.  I performance test the results with BenchmarkDotNet.</summary>
     
     
     
@@ -83,10 +83,10 @@
     <link href="https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/"/>
     <id>https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/</id>
     <published>2020-03-25T00:56:12.000Z</published>
-    <updated>2021-08-24T22:29:09.163Z</updated>
+    <updated>2021-08-28T02:20:14.815Z</updated>
     
     
-    <summary type="html">&lt;p&gt;The new design is a lock.  Time to prototype.&lt;/p&gt;</summary>
+    <summary type="html">Building a bespoke move-and-slide algorithm in Godot 3 to create a performant solution to main challenge created by the unique design of my pause menu in Godot 3.</summary>
     
     
     
@@ -116,10 +116,10 @@
     <link href="https://www.redperegrine.net/2020/03/15/building-a-pause-menu-part-3/"/>
     <id>https://www.redperegrine.net/2020/03/15/building-a-pause-menu-part-3/</id>
     <published>2020-03-15T02:29:49.000Z</published>
-    <updated>2021-08-24T22:29:09.159Z</updated>
+    <updated>2021-08-28T02:19:29.198Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Let’s talk about how I designed the new Pause Menu.&lt;/p&gt;</summary>
+    <summary type="html">A deep dive into the design process I used to design the unique experience of the new pause menu for the game I&#39;m building in Godot 3.</summary>
     
     
     
@@ -153,10 +153,10 @@
     <link href="https://www.redperegrine.net/2019/12/27/building-a-pause-menu-part-2/"/>
     <id>https://www.redperegrine.net/2019/12/27/building-a-pause-menu-part-2/</id>
     <published>2019-12-27T08:17:50.000Z</published>
-    <updated>2021-08-24T22:29:09.153Z</updated>
+    <updated>2021-08-28T02:09:22.087Z</updated>
     
     
-    <summary type="html">&lt;p&gt;That pause menu I’d finished building?  I gave it super-powers.&lt;/p&gt;</summary>
+    <summary type="html">How I avoid crunch culture in the development of my game.  A demonstration of the new pause menu UI for my game built in Godot 3 that I break down the construction of in a future post.</summary>
     
     
     
@@ -186,10 +186,10 @@
     <link href="https://www.redperegrine.net/2018/12/30/building-a-pause-menu-part-1/"/>
     <id>https://www.redperegrine.net/2018/12/30/building-a-pause-menu-part-1/</id>
     <published>2018-12-30T09:34:58.000Z</published>
-    <updated>2021-08-24T22:29:09.147Z</updated>
+    <updated>2021-08-28T02:05:48.095Z</updated>
     
     
-    <summary type="html">&lt;p&gt;I built a pause menu to improve the experience on my Android phone.&lt;/p&gt;</summary>
+    <summary type="html">How to build a basic pause menu for a Godot 3 game to quit the game, go back to the main menu, and to continue playing.  How to configure the pause menu for Android and Windows UWP platforms.</summary>
     
     
     
@@ -223,10 +223,10 @@
     <link href="https://www.redperegrine.net/2018/11/10/prevent-vs-recompile-uwp/"/>
     <id>https://www.redperegrine.net/2018/11/10/prevent-vs-recompile-uwp/</id>
     <published>2018-11-10T03:58:42.000Z</published>
-    <updated>2021-08-24T22:29:09.142Z</updated>
+    <updated>2021-08-28T02:19:04.792Z</updated>
     
     
-    <summary type="html">&lt;p&gt;I’ve discovered a circumstance where Visual Studio compiles UWP projects every time.&lt;/p&gt;</summary>
+    <summary type="html">Preventing Visual Studio from doing a full recompile of a UWP project every time by eliminating the circumstance that triggers the recompile.</summary>
     
     
     
@@ -250,10 +250,10 @@
     <link href="https://www.redperegrine.net/2018/09/21/menu-all-gui/"/>
     <id>https://www.redperegrine.net/2018/09/21/menu-all-gui/</id>
     <published>2018-09-26T08:26:36.000Z</published>
-    <updated>2021-08-24T22:29:09.137Z</updated>
+    <updated>2021-08-28T02:18:52.987Z</updated>
     
     
-    <summary type="html">&lt;p&gt;I built a front end UI for my capability tests.&lt;/p&gt;</summary>
+    <summary type="html">Building a main menu in Godot 3 to allow multiple scenes to be displayed and navigated between.  I share the code I use to create the navigation system.</summary>
     
     
     
@@ -283,10 +283,10 @@
     <link href="https://www.redperegrine.net/2018/09/03/instrumenting-the-accelerometer/"/>
     <id>https://www.redperegrine.net/2018/09/03/instrumenting-the-accelerometer/</id>
     <published>2018-09-09T10:08:52.000Z</published>
-    <updated>2021-08-24T22:29:09.134Z</updated>
+    <updated>2021-08-28T02:20:29.791Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Converting my accelerometer capability test from UWP to Godot 3.&lt;/p&gt;</summary>
+    <summary type="html">Discovering how to read the accelerometer sensor in Godot 3 and create a low-pass filter to smooth the readings for better results.</summary>
     
     
     
@@ -314,10 +314,10 @@
     <link href="https://www.redperegrine.net/2018/08/21/say-gday-to-godot/"/>
     <id>https://www.redperegrine.net/2018/08/21/say-gday-to-godot/</id>
     <published>2018-08-21T13:09:17.000Z</published>
-    <updated>2021-08-24T22:29:09.129Z</updated>
+    <updated>2021-08-28T02:20:29.777Z</updated>
     
     
-    <summary type="html">&lt;p&gt;I’ve taken my first steps to developing a game on the Godot 3 game engine.&lt;/p&gt;</summary>
+    <summary type="html">Getting started with the Godot 3 game engine by recreating the touch manipulation test first created on my own .NET game engine.</summary>
     
     
     
@@ -345,10 +345,10 @@
     <link href="https://www.redperegrine.net/2018/05/02/choosing-a-new-game-engine/"/>
     <id>https://www.redperegrine.net/2018/05/02/choosing-a-new-game-engine/</id>
     <published>2018-05-08T12:47:17.000Z</published>
-    <updated>2021-08-24T22:29:09.122Z</updated>
+    <updated>2021-08-28T02:20:29.791Z</updated>
     
     
-    <summary type="html">&lt;p&gt;I’d decided to use someone else’s engine, but how would I choose which one?&lt;/p&gt;</summary>
+    <summary type="html">I evaluate the major game engines available and choose a game engine with which to continue the development of my game.</summary>
     
     
     
@@ -376,10 +376,10 @@
     <link href="https://www.redperegrine.net/2018/03/30/changing-everything/"/>
     <id>https://www.redperegrine.net/2018/03/30/changing-everything/</id>
     <published>2018-03-29T23:47:31.000Z</published>
-    <updated>2021-08-24T22:29:09.118Z</updated>
+    <updated>2021-08-28T01:47:33.757Z</updated>
     
     
-    <summary type="html">&lt;p&gt;I’ve reached a critical juncture in the development of my game and engine.&lt;/p&gt;</summary>
+    <summary type="html">The end of support for the Microsoft Windows Phone force a change in the decision to create my own game engine and allowed me time to share my journey for frequently in a blog and on social media.</summary>
     
     
     
@@ -401,10 +401,10 @@
     <link href="https://www.redperegrine.net/2017/12/10/measuring-csharp-perf-with-benchmarkdotnet/"/>
     <id>https://www.redperegrine.net/2017/12/10/measuring-csharp-perf-with-benchmarkdotnet/</id>
     <published>2017-12-23T09:12:47.000Z</published>
-    <updated>2021-08-24T22:29:09.114Z</updated>
+    <updated>2021-08-28T02:20:29.791Z</updated>
     
     
-    <summary type="html">&lt;p&gt;I’m measuring optimal C# code implementations for a game engine I’m building.&lt;/p&gt;</summary>
+    <summary type="html">Using BenchmarkDotNet to measure the performance of a game engine I&#39;m building in C#.</summary>
     
     
     

@@ -9,64 +9,8 @@
 
 
     <url>
-        <loc>https://www.redperegrine.net/2021/08/25/red-peregrine-2-0/</loc>
-        <lastmod>2021-08-24T22:29:09.177Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.redperegrine.net/2021/04/10/software-algorithms-for-k-combinations/</loc>
-        <lastmod>2021-08-24T22:29:09.170Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/</loc>
-        <lastmod>2021-08-24T22:29:09.163Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.redperegrine.net/2020/03/15/building-a-pause-menu-part-3/</loc>
-        <lastmod>2021-08-24T22:29:09.159Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.redperegrine.net/2019/12/27/building-a-pause-menu-part-2/</loc>
-        <lastmod>2021-08-24T22:29:09.153Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.redperegrine.net/2018/12/30/building-a-pause-menu-part-1/</loc>
-        <lastmod>2021-08-24T22:29:09.147Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.redperegrine.net/2018/11/10/prevent-vs-recompile-uwp/</loc>
-        <lastmod>2021-08-24T22:29:09.142Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.redperegrine.net/2018/09/21/menu-all-gui/</loc>
-        <lastmod>2021-08-24T22:29:09.137Z</lastmod>
+        <loc>https://www.redperegrine.net/2018/05/02/choosing-a-new-game-engine/</loc>
+        <lastmod>2021-08-28T02:20:29.791Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -74,31 +18,7 @@
 
     <url>
         <loc>https://www.redperegrine.net/2018/09/03/instrumenting-the-accelerometer/</loc>
-        <lastmod>2021-08-24T22:29:09.134Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.redperegrine.net/2018/08/21/say-gday-to-godot/</loc>
-        <lastmod>2021-08-24T22:29:09.129Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.redperegrine.net/2018/05/02/choosing-a-new-game-engine/</loc>
-        <lastmod>2021-08-24T22:29:09.122Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.redperegrine.net/2018/03/30/changing-everything/</loc>
-        <lastmod>2021-08-24T22:29:09.118Z</lastmod>
+        <lastmod>2021-08-28T02:20:29.791Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -106,7 +26,87 @@
 
     <url>
         <loc>https://www.redperegrine.net/2017/12/10/measuring-csharp-perf-with-benchmarkdotnet/</loc>
-        <lastmod>2021-08-24T22:29:09.114Z</lastmod>
+        <lastmod>2021-08-28T02:20:29.791Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.redperegrine.net/2018/08/21/say-gday-to-godot/</loc>
+        <lastmod>2021-08-28T02:20:29.777Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.redperegrine.net/2020/04/25/building-a-pause-menu-part-4/</loc>
+        <lastmod>2021-08-28T02:20:14.815Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.redperegrine.net/2020/03/15/building-a-pause-menu-part-3/</loc>
+        <lastmod>2021-08-28T02:19:29.198Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.redperegrine.net/2018/11/10/prevent-vs-recompile-uwp/</loc>
+        <lastmod>2021-08-28T02:19:04.792Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.redperegrine.net/2018/09/21/menu-all-gui/</loc>
+        <lastmod>2021-08-28T02:18:52.987Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.redperegrine.net/2021/08/25/red-peregrine-2-0/</loc>
+        <lastmod>2021-08-28T02:17:45.142Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.redperegrine.net/2021/04/10/software-algorithms-for-k-combinations/</loc>
+        <lastmod>2021-08-28T02:16:24.515Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.redperegrine.net/2019/12/27/building-a-pause-menu-part-2/</loc>
+        <lastmod>2021-08-28T02:09:22.087Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.redperegrine.net/2018/12/30/building-a-pause-menu-part-1/</loc>
+        <lastmod>2021-08-28T02:05:48.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.redperegrine.net/2018/03/30/changing-everything/</loc>
+        <lastmod>2021-08-28T01:47:33.757Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
